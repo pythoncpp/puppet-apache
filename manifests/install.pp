@@ -4,10 +4,8 @@
 #
 # @example
 #   include apache::install
-class apache::install (
-  $install_ensure = $apache::params::install_ensure,
-) inherits apache::params {
-  package { "${install_name}" :
+class apache::install {
+  package { "${apache::install_name}" :
     ensure  =>  'present'
   }
 }
